@@ -1,5 +1,5 @@
 ## ---- Source data-processing scripts ----
-source("r/data.r")
+source("r/quant-data.r")
 
 ## ---- Generate tables ----
 dat <- readRDS("dat/quant_vars.rds")
