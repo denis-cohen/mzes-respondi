@@ -2,11 +2,6 @@
 respondi_xlsx_name <- "data_project_21384_2022_04_21.xlsx"
 respondi_sheet_name <- "Export 1.1"
 
-## ---- Install renv if uninstalled ----
-if (!("renv" %in% installed.packages())) {
-  install.packages("renv")
-}
-
 ## ---- Start up ----
 .First <- function() {
   ## ---- Generate folders ----
