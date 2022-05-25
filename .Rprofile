@@ -13,6 +13,10 @@ respondi_sheet_name <- "Export 1.1"
   dir.create(paste0(getwd(), "/csv/bivariate"), showWarnings = F)
   
   ## ---- Initialize/activate renv ----
+  if (!("renv %in% installed.packages()")) {
+    install.packages("renv")
+  }
+  
   if (!("renv" %in% list.files())) {
     renv::init()
   } else {
