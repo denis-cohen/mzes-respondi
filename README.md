@@ -24,9 +24,9 @@
 
 ### Export
 
-Für den Export senden Sie bitte folgende Ordner/Auswertungsdateien an Simon Ellerbrock:
+Für den Export senden Sie bitte folgende Ordner/Auswertungsdateien an die hier verlinkten Rezipient*innen:
 
-1. Den Inhalt des Ordners `csv/univariate`.
-1. Den Inhalt des Ordners `csv/bivariate`, nach vorangegangener Prüfung (vgl. oben).
-1. Die manuell anonymisierte Fassung der Datei `csv/open-text/post-anonymization.csv`.
-1. Die abrechnungsrelevante Gesamtzahl der beantworteten Freitextfragen, d.h., die Datei `csv/open-text/num_answered_questions.csv`.
+1. Den Inhalt des Ordners `csv/univariate` $\rightarrow$ [Simon Ellerbrock](mailto:Simon.Ellerbrock@mzes.uni-mannheim.de)
+1. Den Inhalt des Ordners `csv/bivariate`, nach vorangegangener Prüfung (vgl. oben) $\rightarrow$ [Simon Ellerbrock](mailto:Simon.Ellerbrock@mzes.uni-mannheim.de)
+1. Die manuell anonymisierte Fassung der Datei `csv/open-text/post-anonymization.csv` $\rightarrow$ [Anna Adendorf](mailto:Anna.Adendorf@mzes.uni-mannheim.de), [Anna-Sophie Kurella](anna.kurella@mzes.uni-mannheim.de)
+1. Die abrechnungsrelevante Gesamtzahl der beantworteten Freitextfragen, d.h., die Datei `csv/open-text/num_answered_questions.csv` $\rightarrow$ [Simon Ellerbrock](mailto:Simon.Ellerbrock@mzes.uni-mannheim.de)
