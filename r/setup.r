@@ -7,5 +7,7 @@ pacman::p_load(
   readxl,
   here,
   ggplot2,
-  viridisLite
+  viridisLite,
+  tidyr,
+  readr
 )

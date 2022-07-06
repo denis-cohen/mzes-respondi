@@ -9,9 +9,13 @@ respondi_sheet_name <- "Export 1.1"
   dir.create(paste0(getwd(), "/rmd"), showWarnings = F)
   dir.create(paste0(getwd(), "/pdf"), showWarnings = F)
   dir.create(paste0(getwd(), "/dat"), showWarnings = F)
+  dir.create(paste0(getwd(), "/aux-dat-internal"), showWarnings = F)
+  dir.create(paste0(getwd(), "/aux-dat-external"), showWarnings = F)
+  dir.create(paste0(getwd(), "/dat"), showWarnings = F)
   dir.create(paste0(getwd(), "/csv"), showWarnings = F)
   dir.create(paste0(getwd(), "/csv/univariate"), showWarnings = F)
   dir.create(paste0(getwd(), "/csv/bivariate"), showWarnings = F)
+  dir.create(paste0(getwd(), "/csv/open-text"), showWarnings = F)
   
   ## ---- Initialize/activate renv ----
   if (!("renv" %in% list.files())) {

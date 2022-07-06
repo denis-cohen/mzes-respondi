@@ -119,7 +119,8 @@ dat <- readxl::read_xlsx(
     v_128,
     v_130,
     v_131,
-    c_0006
+    c_0006,
+    lfdn
   ) %>%
   dplyr::mutate_all(.funs = ~ dplyr::if_else(. == -77, NA_real_, .)) %>%
   dplyr::mutate_at(

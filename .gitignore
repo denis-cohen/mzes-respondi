@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 renv/
+rmd/
+aux-dat-internal/
+dat/
