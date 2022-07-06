@@ -2,8 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
-renv/
+renv/library/
 rmd/
 aux-dat-internal/
 dat/
-csv/
