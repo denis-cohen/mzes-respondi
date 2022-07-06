@@ -17,9 +17,16 @@ proc_dat_qual <- dat_qual %>%
   ) %>%
   dplyr::filter(!is.na(response))
 
-ordered_names <- unique(proc_dat_qual$var)
-num_responses <- nrow(proc_dat_qual)
+## Number of answered questions per respondents
+proc_dat_qual %>%
+  dplyr::group_by(lfdn, var) %>%
+  dplyr::summarize(answered_any = 1L) %>%
+  dplyr::ungroup() %>%
+  dplyr::summarize(sum_answered_any = sum(answered_any)) %>%
+  readr::write_csv("csv/open-text/num_answered_questions.csv")
 
+## Randomization, arrangement, output
+ordered_names <- unique(proc_dat_qual$var)
 proc_dat_qual <- proc_dat_qual %>%
   dplyr::mutate(var = factor(
     var,

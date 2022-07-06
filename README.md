@@ -20,3 +20,13 @@
 1. **Bitte arbeiten Sie in der Datei `csv/open-text/post-anonymization.csv`, um das besprochene manuelle Anonymisierungsverfahren umzusetzen:**
     1. Um zu gewährleisten, dass Freitextantworten keine Rückschlüsse auf einzelne Personen zulassen, werden die offenen Antworten zunächst vom beauftragten Unternehmen auf Anonymität geprüft und, falls nötig, anonymisiert. **Bitte vermerken Sie manuelle Änderungen zur Gewährleistung der Anonymität in der Spalte** `anonymized_by_respondi`. 
     1. Anschließend werden die offenen Antworten an zwei Beschäftigte des MZES übermittelt und erneut auf Anonymität überprüft. Die Übermittlung der Daten erfolgt dabei ohne Verknüpfung zu sonstigen personenbezogenen Daten, sondern lediglich in Form eines Textdokuments, das die offenen Antworten zu einer gegebenen Frage in zufälliger Reihenfolge ohne Bezug zu weiteren quantitativen Angaben (wie bspw. persönlichen Merkmalen) beinhaltet. Sollte die Gefahr der Deanonymisierung aufgrund des Inhalts der Freitextangaben bestehen, werden die betroffenen Freitextangaben weiter anonymisiert. Sollte dies nicht möglich sein, wird die betroffene Freitextantwort gelöscht. **Bitte kennzeichnen Sie Antworten, bei denen Sie implizite (d.h. sich ggf. aus dem Kontext ergebende) deanonymisierende Inhalte vermuten in der Spalte** `flagged_by_respondi`.
+1. Aufgrund von technischen Schwierigkeiten bei der Trennung und Randomisierung multipler Antworten auf ein und die selbe Frage hatten wir uns darauf geeinigt, multiple Antworten zu Fragen zwar in separaten (bis zu acht) Textfeldern zu erfassen, die manuelle Anonymisierung aber pro Frage und Befragtem -- nicht pro Textfeld und Befragtem -- abzurechnen. Da diese Information im Zuge der Randomisierung verloren geht, erzeugen Zeilen 20-26 des Skripts `r/get-randomized-responses.r` über alle Befragten hinweg die Summe aller Fragen, bei denen mindestens ein Textfeld eine valide (nicht-fehlende) Freitextangabe enthält. Diese wird unter `csv/open-text/num_answered_questions.csv` gespeichert. **Bitte prüfen Sie dieses abrechnungsrelevante Verfahren auf Richtigkeit**.
+
+### Export
+
+Für den Export senden Sie bitte folgende Ordner/Auswertungsdateien an Simon Ellerbrock:
+
+1. Den Inhalt des Ordners `csv/univariate`.
+1. Den Inhalt des Ordners `csv/bivariate`, nach vorangegangener Prüfung (vgl. oben).
+1. Die manuell anonymisierte Fassung der Datei `csv/open-text/post-anonymization.csv`.
+1. Die abrechnungsrelevante Gesamtzahl der beantworteten Freitextfragen, d.h., die Datei `csv/open-text/num_answered_questions.csv`.
