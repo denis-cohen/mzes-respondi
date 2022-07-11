@@ -144,7 +144,7 @@ dat_qual <- readxl::read_xlsx(paste0("dat/", respondi_xlsx_name),
     work_atmos_improve_char6 = v_375,
     work_atmos_improve_char7 = v_376,
     work_atmos_improve_char8 = v_377,
-    covid_neg_other_char = v_33,
+    covid_neg_other_char1 = v_33,
     covid_neg_explain_char1 = v_378,
     covid_neg_explain_char2 = v_379,
     covid_neg_explain_char3 = v_380,
@@ -259,7 +259,7 @@ dat <- dat %>%
     NA_character_)
   ) %>%
   dplyr::mutate_at(
-    .vars = vars(covid_neg_other_char,
+    .vars = vars(covid_neg_other_char1,
                  dplyr::starts_with("covid_neg_explain_char")),
     .funs = ~ dplyr::if_else(any(!is.na(
       c(

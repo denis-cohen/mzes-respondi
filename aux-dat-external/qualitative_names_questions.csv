@@ -2,12 +2,13 @@ name,question
 work_condi_hamper_char,Can you think of any working conditions at the MZES that hamper your or your colleagues’ successful integration into the workplace and the professional development? 
 work_condi_improve_char,Can you think of any measures to alleviate these problems? 
 work_atmos_improve_char,Do you have any (other) suggestions for improving the work atmosphere at the MZES?
+covid_neg_other_char,Other [referring to: What in particular has made everyday work harder for you? Tick all that apply.]
 covid_neg_explain_char,Could you elaborate on the way in which these factors affected your work?
 covid_support_char,"Have you received support from colleagues or superiors that helped you cope with the situation apart from the measurements centrally implemented by the MZES (e.g., laptops for remote work, extension of fellowships, etc.)? Please elaborate. "
 covid_suggest_char,Do you have any suggestions as to what could be done to help you in particular or MZES employees in general to deal with the changes brought on by the COVID-19 pandemic?
 covid_return_char,"Given the ongoing vaccination programme, we may expect a continuing gradual return to normal work routines. Please share any suggestions you may have on how the MZES can facilitate this process for you and your colleagues."
 self_explain_char,"If you would like, please give a brief anonymized description of your experience(s)."
-self_conseq_career_explain_char,"How? (referring to: Do you think that any of these experiences have had, or will have, negative effects on your career? )"
+self_conseq_career_explain_char,"How? [referring to: Do you think that any of these experiences have had, or will have, negative effects on your career?]"
 others_suggest_infrastruc_char,What kind of support infrastructure do you think would be most effective in helping people suffering from experiences like the ones you have made and/or witnessed?
 others_suggest_prevent_char,"Can you think of any measures that would help prevent the experiences you have made and/or witnessed? If so, which? "
 feedback_worker_char,"Please let us know of any suggestions you may have for the work of your departmental staff representatives (currently: Marvin Brinkmann, Simon Ellerbrock, Anna Kurella, Sandra Morgenstern). "

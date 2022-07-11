@@ -27,11 +27,12 @@ proc_dat_qual %>%
   readr::write_csv("csv/open-text/num_answered_questions.csv")
 
 ## Randomization, arrangement, output
-ordered_names <- unique(proc_dat_qual$var)
+question_texts <-
+  readr::read_csv("aux-dat-external/qualitative_names_questions.csv")
 proc_dat_qual <- proc_dat_qual %>%
   dplyr::mutate(var = factor(
     var,
-    levels = ordered_names,
+    levels = question_texts$name,
     ordered = TRUE
   )) %>%
   dplyr::arrange(var, lfdn, num) %>%
@@ -43,7 +44,7 @@ proc_dat_qual <- proc_dat_qual %>%
   dplyr::ungroup() %>%
   dplyr::mutate(response_num = row_number()) %>%
   dplyr::left_join(
-    readr::read_csv("aux-dat-external/qualitative_names_questions.csv"),
+    question_texts,
     by = c("var" = "name")
   ) %>%
   dplyr::select(response_num,

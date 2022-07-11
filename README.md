@@ -2,7 +2,7 @@
 
 ## Hinweise für respondi
 
-*Stand: 11.07.2022:* **Bitte führen Sie nur Schritte I und III. Schritt II befindet sich aktuell noch in Vorbereitung. Entsprechend kommen aktuell für Schritt IV (Export) nur Schritte IV.3 und IV.4 in Frage.**
+*Stand: 11.07.2022:* **Bitte führen Sie nur Schritte I und III aus. Schritt II befindet sich aktuell noch in Vorbereitung. Entsprechend kommen aktuell für Schritt IV (Export) nur Schritte IV.3 und IV.4 in Frage.**
 
 ### I. Vorbereitung
 
