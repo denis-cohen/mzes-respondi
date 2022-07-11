@@ -58,7 +58,7 @@ proc_dat_qual <- proc_dat_qual %>%
 ## ---- Export as CSV ----
 ## Pre-anonymization (for reference)
 proc_dat_qual %>%
-  readr::write_csv("csv/open-text/pre-anonymization.csv")
+  readr::write_excel_csv("csv/open-text/pre-anonymization.csv")
 
 ## Version for manual anonymization
 if (file.exists("csv/open-text/post-anonymization.csv")) {
@@ -73,5 +73,5 @@ if (file.exists("csv/open-text/post-anonymization.csv")) {
   )
 } else {
   proc_dat_qual %>%
-    readr::write_csv("csv/open-text/post-anonymization.csv")
+    readr::write_excel_csv("csv/open-text/post-anonymization.csv")
 }
