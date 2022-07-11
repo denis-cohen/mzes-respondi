@@ -1,4 +1,5 @@
 ## ---- Source data-processing scripts ----
+source("r/quant-data.r")
 source("r/qual-data.r")
 
 ## ---- Post-processing of text questions for manual deanonymization ----
@@ -55,7 +56,22 @@ proc_dat_qual <- proc_dat_qual %>%
   )
 
 ## ---- Export as CSV ----
+## Pre-anonymization (for reference)
 proc_dat_qual %>%
   readr::write_csv("csv/open-text/pre-anonymization.csv")
-proc_dat_qual %>%
-  readr::write_csv("csv/open-text/post-anonymization.csv")
+
+## Version for manual anonymization
+if (file.exists("csv/open-text/post-anonymization.csv")) {
+  stop(
+    paste0(
+      'The file csv/open-text/post-anonymization.csv ',
+      'already exists. It will not be overwritten as potential ',
+      ' manual edits would be lost. ',
+      'If you want to replace the file, please overwrite it ',
+      'manually with a copy of csv/open-text/pre-anonymization.csv.'
+    )
+  )
+} else {
+  proc_dat_qual %>%
+    readr::write_csv("csv/open-text/post-anonymization.csv")
+}
