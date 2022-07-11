@@ -2,7 +2,7 @@
 
 ## Hinweise für respondi
 
-*Stand: 11.07.2022:* **Bitte führen Sie nur Schritte I und III aus. Schritt II befindet sich aktuell noch in Vorbereitung.**
+*Stand: 11.07.2022:* **Bitte führen Sie nur Schritte I und III. Schritt II befindet sich aktuell noch in Vorbereitung. Entsprechend kommen aktuell für Schritt IV (Export) nur Schritte IV.3 und IV.4 in Frage.**
 
 ### I. Vorbereitung
 
@@ -25,7 +25,7 @@
     1. "Anschließend werden die offenen Antworten an zwei Beschäftigte des MZES übermittelt und erneut auf Anonymität überprüft. Die Übermittlung der Daten erfolgt dabei ohne Verknüpfung zu sonstigen personenbezogenen Daten, sondern lediglich in Form eines Textdokuments, das die offenen Antworten zu einer gegebenen Frage in zufälliger Reihenfolge ohne Bezug zu weiteren quantitativen Angaben (wie bspw. persönlichen Merkmalen) beinhaltet. Sollte die Gefahr der Deanonymisierung aufgrund des Inhalts der Freitextangaben bestehen, werden die betroffenen Freitextangaben weiter anonymisiert. Sollte dies nicht möglich sein, wird die betroffene Freitextantwort gelöscht." **Bitte kennzeichnen Sie zur Erleichterung dieses Schritts alle Antworten, bei denen Sie implizite (d.h. sich ggf. aus dem Kontext ergebende) deanonymisierende Inhalte vermuten, in der Spalte** `flagged_by_respondi`.
 1. Aufgrund von technischen Schwierigkeiten bei der Trennung und Randomisierung multipler Antworten auf ein und die selbe Frage hatten wir uns mit Ihnen darauf geeinigt, multiple Antworten zu Fragen zwar in separaten (bis zu acht) Textfeldern zu erfassen, die manuelle Anonymisierung aber pro Frage und Befragtem - nicht pro Textfeld und Befragtem - abzurechnen. Da diese Information im Zuge der Randomisierung verloren geht, erzeugen Zeilen 21-27 des Skripts `r/get-randomized-responses.r` über alle Befragten hinweg die Summe aller Fragen, bei denen mindestens ein Textfeld eine valide (nicht-fehlende) Freitextangabe enthält. Diese wird unter `csv/open-text/num_answered_questions.csv` gespeichert. **Bitte prüfen Sie dieses abrechnungsrelevante Verfahren auf Richtigkeit**.
 
-### Export
+### IV. Export
 
 Für den Export senden Sie bitte folgende Ordner/Auswertungsdateien an die hier verlinkten Rezipient*innen:
 
