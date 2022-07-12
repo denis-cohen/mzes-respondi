@@ -22,8 +22,7 @@ dat <- readRDS("dat/quant_vars.rds") %>%
   dplyr::mutate_at(.vars = vars(starts_with("num_div")),
                    .funs = ~ifelse(. > 3, 3, .)) %>%
   dplyr::mutate_at(.vars = vars(starts_with("num_div")),
-                   .funs = ~ factor(., levels = 0:max(., na.rm = TRUE)),
-                   labels = c(0:2, "3 or more")) %>%
+                   .funs = ~ factor(., levels = c(0:2, "3 or more"))) %>%
   dplyr::mutate_at(.vars = vars(starts_with("work_")),
                    .funs = ~ factor(
                      .,
@@ -119,7 +118,7 @@ dat <- readRDS("dat/quant_vars.rds") %>%
       TRUE ~ NA_integer_
     ),
     personal_lgbtq_plus = dplyr::if_else(
-      personal_gender == "Non-binary or genderqueer",
+      personal_gender %in% "Non-binary or genderqueer",
       1L,
       personal_lgbtq
     )

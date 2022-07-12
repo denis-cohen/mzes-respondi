@@ -75,6 +75,14 @@ dat_qual <- readxl::read_xlsx(paste0("dat/", respondi_xlsx_name),
     v_423,
     v_424,
     v_425,
+    v_474,
+    v_475,
+    v_476,
+    v_477,
+    v_478,
+    v_479,
+    v_480,
+    v_481,
     v_426,
     v_427,
     v_428,
@@ -193,6 +201,14 @@ dat_qual <- readxl::read_xlsx(paste0("dat/", respondi_xlsx_name),
     self_conseq_career_explain_char6 = v_423,
     self_conseq_career_explain_char7 = v_424,
     self_conseq_career_explain_char8 = v_425,
+    self_support_experience_char1 = v_474,
+    self_support_experience_char2 = v_475,
+    self_support_experience_char3 = v_476,
+    self_support_experience_char4 = v_477,
+    self_support_experience_char5 = v_478,
+    self_support_experience_char6 = v_479,
+    self_support_experience_char7 = v_480,
+    self_support_experience_char8 = v_481,
     others_suggest_infrastruc_char1 = v_426,
     others_suggest_infrastruc_char2 = v_427,
     others_suggest_infrastruc_char3 = v_428,
@@ -259,8 +275,10 @@ dat <- dat %>%
     NA_character_)
   ) %>%
   dplyr::mutate_at(
-    .vars = vars(covid_neg_other_char1,
-                 dplyr::starts_with("covid_neg_explain_char")),
+    .vars = vars(
+      covid_neg_other_char1,
+      dplyr::starts_with("covid_neg_explain_char")
+    ),
     .funs = ~ dplyr::if_else(any(!is.na(
       c(
         covid_neg_psych,
@@ -272,6 +290,13 @@ dat <- dat %>%
     )),
     .,
     NA_character_)
+  ) %>%
+  dplyr::mutate_at(
+    .vars = vars(dplyr::starts_with("self_support_experience_char")),
+    .funs = ~ dplyr::if_else(is.na(self_support) |
+                               self_support == 1,
+                             NA_character_,
+                             .)
   ) %>%
   dplyr::mutate_at(
     .vars = vars(dplyr::starts_with("self_explain_char")),

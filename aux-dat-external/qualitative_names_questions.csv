@@ -9,6 +9,7 @@ covid_suggest_char,Do you have any suggestions as to what could be done to help 
 covid_return_char,"Given the ongoing vaccination programme, we may expect a continuing gradual return to normal work routines. Please share any suggestions you may have on how the MZES can facilitate this process for you and your colleagues."
 self_explain_char,"If you would like, please give a brief anonymized description of your experience(s)."
 self_conseq_career_explain_char,"How? [referring to: Do you think that any of these experiences have had, or will have, negative effects on your career?]"
+self_support_experience_char,How was your experience of seeking help in the workplace?
 others_suggest_infrastruc_char,What kind of support infrastructure do you think would be most effective in helping people suffering from experiences like the ones you have made and/or witnessed?
 others_suggest_prevent_char,"Can you think of any measures that would help prevent the experiences you have made and/or witnessed? If so, which? "
 feedback_worker_char,"Please let us know of any suggestions you may have for the work of your departmental staff representatives (currently: Marvin Brinkmann, Simon Ellerbrock, Anna Kurella, Sandra Morgenstern). "
