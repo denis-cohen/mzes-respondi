@@ -16,7 +16,7 @@ continuous_vars <- c("work_atmos",
                      "covid_admin")
 conditioning_vars <- dat %>%
   dplyr::select(starts_with("personal_"),
-                starts_with("num_div_")) %>%
+                starts_with("num_div")) %>%
   names()
 
 bivariate_summary <- tidyr::tibble()
