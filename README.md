@@ -2,7 +2,7 @@
 
 ## Hinweise für respondi
 
-*Stand: 11.07.2022:* **Bitte führen Sie nur Schritte I und III aus. Schritt II befindet sich aktuell noch in Vorbereitung. Entsprechend kommen aktuell für Schritt IV (Export) nur Schritte IV.3 und IV.4 in Frage.**
+*Stand: 18.07.2022:* **Alle Schritte sind nun ausführbar.**
 
 ### I. Vorbereitung
 
@@ -13,7 +13,7 @@
 ### II. Auswertung der quantitativen/geschlossenenen Fragen
 
 1. Führen Sie bitte das Skript `r/get-univariate-summaries.r` aus. Die dadurch erzeugten univariaten Häufigkeitverteilungen werden unter `csv/univariate` gespeichert.
-1. Führen Sie bitte das Skript `r/get-bivariate-summaries.r` aus. Die dadurch erzeugten bivariaten Häufigkeitverteilungen (Häufigkeitesverteilungen nach Subgruppen) werden unter `csv/bivariate` gespeichert. Dabei werden gemäß Datenschutzkonzept Auswertungen unterbunden, bei denen eine Subgruppengröße von $N=5$ unterschritten wird. Ein entsprechender Hinweis unter Nennung der betroffenen CSV-Dateien wird generiert. **Bitte prüfen Sie, dass die genannten CSV-Dateien keine Häufigkeitsverteilungen enthalten**.
+1. Führen Sie bitte das Skript `r/get-bivariate-summaries.r` aus. Die dadurch erzeugten bivariaten Häufigkeitverteilungen (Häufigkeitesverteilungen nach Subgruppen) werden unter `csv/bivariate` gespeichert. Dabei werden gemäß Datenschutzkonzept Auswertungen unterbunden, bei denen eine Subgruppengröße von $N=5$ unterschritten wird. **Bitte prüfen Sie, dass diese Bedingung erfüllt ist**. Die Subgruppengröße wird in der Spalte `subgroup_size` ausgegeben, die Spalte `value` wird mit dem Hinweis "Subgroup too small" versehen wenn `subgroup_size < 5`.
 
 ### III. Auswertung der qualitativen/offenen Freitextfragen
 

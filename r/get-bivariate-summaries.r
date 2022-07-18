@@ -7,7 +7,17 @@ source("r/process-quant-data.r")
 main_quantitative_vars <- dat %>%
   dplyr::select(starts_with("work_"),
                 starts_with("covid_"),
-                starts_with("self")) %>%
+                self_any,
+                self_none,
+                self_insult,
+                self_threat,
+                self_molest,
+                self_discri,
+                self_any_col,
+                self_any_sup,
+                self_any_oth,
+                self_conseq_career,
+                self_support) %>%
   names()
 continuous_vars <- c("work_atmos",
                      "work_condi",
@@ -92,6 +102,14 @@ bivariate_summary <- bivariate_summary %>%
     value = ifelse(subgroup_size < 5, "Subgroup too small", value)
   ) %>%
   distinct()
+
+## Add question text
+bivariate_summary <- bivariate_summary %>%
+  dplyr::left_join(
+    readr::read_csv("aux-dat-external/quantitative_names_questions.csv",
+                    show_col_types = FALSE),
+    by = c("var" = "name")
+  )
 
 bivariate_summary %>%
   readr::write_excel_csv("csv/bivariate/bivariate-summary.csv")

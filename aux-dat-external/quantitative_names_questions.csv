@@ -1,82 +1,132 @@
-﻿"name","question"
-"work_atmos",NA
-"work_condi",NA
-"covid_resea",NA
-"covid_teach",NA
-"covid_admin",NA
-"covid_neg_psych",NA
-"covid_neg_famil",NA
-"covid_neg_equip",NA
-"covid_neg_socia",NA
-"covid_neg_other",NA
-"self_insult",NA
-"self_threat",NA
-"self_molest",NA
-"self_discri",NA
-"self_none",NA
-"self_insult_col",NA
-"self_insult_sup",NA
-"self_insult_oth",NA
-"self_insult_ref",NA
-"self_threat_col",NA
-"self_threat_sup",NA
-"self_threat_oth",NA
-"self_threat_ref",NA
-"self_molest_col",NA
-"self_molest_sup",NA
-"self_molest_oth",NA
-"self_molest_ref",NA
-"self_discri_col",NA
-"self_discri_sup",NA
-"self_discri_oth",NA
-"self_discri_ref",NA
-"self_insult_freq",NA
-"self_threat_freq",NA
-"self_molest_freq",NA
-"self_discri_freq",NA
-"self_reason_gender",NA
-"self_reason_parent",NA
-"self_reason_1stgen",NA
-"self_reason_handic",NA
-"self_reason_lgbtq",NA
-"self_reason_ethnic",NA
-"self_reason_relig",NA
-"self_reason_citiz",NA
-"self_reason_lang",NA
-"self_reason_occup",NA
-"self_reason_appear",NA
-"self_reason_other",NA
-"self_reason_refuse",NA
-"self_reason_none",NA
-"self_conseq_career",NA
-"self_support",NA
-"self_support_col",NA
-"self_support_dep",NA
-"self_support_eoo",NA
-"self_support_sup",NA
-"self_support_adm",NA
-"self_support_fam",NA
-"self_support_oth",NA
-"self_nosup_fear",NA
-"self_nosup_ineffective",NA
-"self_nosup_dkwhere",NA
-"self_nosup_other",NA
-"self_conseq_offender",NA
-"personal_occup",NA
-"personal_gender",NA
-"personal_parent",NA
-"personal_1stgen",NA
-"personal_handic",NA
-"personal_lgbtq",NA
-"personal_ethnic",NA
-"personal_relig",NA
-"personal_citiz",NA
-"personal_lang",NA
-"personal_refuse",NA
-"personal_none",NA
-"personal_nonmale",NA
-"personal_ethrel",NA
-"personal_citlan",NA
-"personal_lgbtq_plus",NA
-"num_div_incl_nonbin",NA
-"num_div_incl_nonmale",NA
+name,question
+work_atmos,Satisfaction with work atmosphere
+work_condi,Satisfaction with working conditions
+covid_resea,Impact of covid on research
+covid_teach,Impact of covid on teaching
+covid_admin,Impact of covid on administrative work
+covid_neg_psych,Negative impact of covid: mental health issues
+covid_neg_famil,Negative impact of covid: family commitments
+covid_neg_equip,Negative impact of covid: lack of facilities
+covid_neg_socia,Negative impact of covid: lack of exchange
+covid_neg_other,Negative impact of covid: other reason
+self_insult,Personal experience: disrespect/insult
+self_threat,Personal experience: threat
+self_molest,Personal experience: harassment
+self_discri,Personal experience: discrimination
+self_none,Personal experience: none
+self_any,Personal experience: any negative experience
+self_any_col,Offender: co-worker
+self_any_sup,Offender: superior
+self_any_oth,Offender: other
+self_insult_col,Offender disrespect/insult: co-worker
+self_insult_sup,Offender disrespect/insult: superior
+self_insult_oth,Offender disrespect/insult: other
+self_insult_ref,Offender disrespect/insult: refusal
+self_threat_col,Offender threat: co-worker
+self_threat_sup,Offender threat: superior
+self_threat_oth,Offender threat: other
+self_threat_ref,Offender threat: refusal
+self_molest_col,Offender harassment: co-worker
+self_molest_sup,Offender harassment: superior
+self_molest_oth,Offender harassment: other
+self_molest_ref,Offender harassment: refusal
+self_discri_col,Offender discrimination: co-worker
+self_discri_sup,Offender discrimination: superior
+self_discri_oth,Offender discrimination: other
+self_discri_ref,Offender discrimination: refusal
+self_insult_freq,Frequency disrespect/insult
+self_threat_freq,Frequency threat
+self_molest_freq,Frequency harassment
+self_discri_freq,Frequency discrimination
+self_reason_gender,Reason for incident: gender
+self_reason_parent,Reason for incident: parenthood
+self_reason_1stgen,Reason for incident: first-generation scholar
+self_reason_handic,Reason for incident: chronic illness or disability
+self_reason_lgbtq,Reason for incident: LGBTQ+
+self_reason_ethnic,Reason for incident: ehtnic minority
+self_reason_relig,Reason for incident: religious minority
+self_reason_citiz,Reason for incident: non-citizen
+self_reason_lang,Reason for incident: non-native speaker
+self_reason_occup,Reason for incident: occupational role
+self_reason_appear,Reason for incident: physical appearance
+self_reason_other,Reason for incident: other reason
+self_reason_refuse,Reason for incident: refusal
+self_reason_none,Reason for incident: none
+self_conseq_career,Negative effects of incidents on own career 
+self_support,Seeking support after incident
+self_support_col,Support by: co-workers
+self_support_dep,Support by: departmental staff representatives
+self_support_eoo,Support by: equal opportunities representatives
+self_support_sup,Support by: superiors
+self_support_adm,Support by: administration
+self_support_fam,Support by: friends/family
+self_support_oth,Support by: others
+self_nosup_fear,Reason for not seeking support: fear of consequences
+self_nosup_ineffective,Reason for not seeking support: ineffective
+self_nosup_dkwhere,Reason for not seeking support: no idea where
+self_nosup_other,Reason for not seeking support: other reason
+self_conseq_offender,Repercussions for offender
+others_insult,Others' experiences: disrespect/insult
+others_threat,Others' experiences: threat
+others_molest,Others' experiences: harassment
+others_discri,Others' experiences: discrimination
+others_none,Others' experiences: none
+others_any,Others' experience: any negative experience
+others_any_col,Offender: co-worker
+others_any_sup,Offender: superior
+others_any_oth,Offender: other
+others_insult_col,Offender disrespect/insult: co-worker
+others_insult_sup,Offender disrespect/insult: superior
+others_insult_oth,Offender disrespect/insult: other
+others_insult_ref,Offender disrespect/insult: refusal
+others_threat_col,Offender threat: co-worker
+others_threat_sup,Offender threat: superior
+others_threat_oth,Offender threat: other
+others_threat_ref,Offender threat: refusal
+others_molest_col,Offender harassment: co-worker
+others_molest_sup,Offender harassment: superior
+others_molest_oth,Offender harassment: other
+others_molest_ref,Offender harassment: refusal
+others_discri_col,Offender discrimination: co-worker
+others_discri_sup,Offender discrimination: superior
+others_discri_oth,Offender discrimination: other
+others_discri_ref,Offender discrimination: refusal
+others_insult_freq,Frequency disrespect/insult
+others_threat_freq,Frequency threat
+others_molest_freq,Frequency harassment
+others_discri_freq,Frequency discrimination
+others_reason_gender,Reason for incident: gender
+others_reason_parent,Reason for incident: parenthood
+others_reason_1stgen,Reason for incident: first-generation scholar
+others_reason_handic,Reason for incident: chronic illness or disability
+others_reason_lgbtq,Reason for incident: LGBTQ+
+others_reason_ethnic,Reason for incident: ehtnic minority
+others_reason_relig,Reason for incident: religious minority
+others_reason_citiz,Reason for incident: non-citizen
+others_reason_lang,Reason for incident: non-native speaker
+others_reason_occup,Reason for incident: occupational role
+others_reason_appear,Reason for incident: physical appearance
+others_reason_other,Reason for incident: other reason
+others_reason_refuse,Reason for incident: refusal
+others_reason_none,Reason for incident: none
+others_conseq_career,Negative effects of incidents on own career 
+others_conseq_offender,Repercussions for offender
+personal_occup,Occupational role
+personal_gender,Gender
+personal_parent,Parenthood
+personal_1stgen,First-generation scholar
+personal_handic,Chronic illness or disability
+personal_lgbtq,LGBTQ+
+personal_ethnic,Ethnic minority
+personal_relig,Religious minority
+personal_citiz,Non-citizen
+personal_lang,Non-native speaker
+personal_refuse,Refusal (personal characteristics)
+personal_none,None (personal characteristics)
+personal_nonmale,Non-male 
+personal_ethrel,Ethnic or religuous minority
+personal_citlan,Non-citizen or non-native speaker
+personal_lgbtq_plus,LGBTQ+ or non-binary
+num_div,Number of diversity-related characteristics (excluding gender)
+num_div_incl_nonbin,Number of diversity-related characteristics (including non-binary respondents)
+num_div_incl_nonmale,Number of diversity-related characteristics (including non-male respondents)

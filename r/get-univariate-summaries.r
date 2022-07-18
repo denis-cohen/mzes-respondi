@@ -58,6 +58,14 @@ for (var in quantitative_vars) {
                                          frequency_distribution)
 }
 
+## Add question text
+univariate_summary <- univariate_summary %>%
+  dplyr::left_join(
+    readr::read_csv("aux-dat-external/quantitative_names_questions.csv",
+                    show_col_types = FALSE),
+    by = c("var" = "name")
+  )
+
 ## Export
 univariate_summary %>%
   readr::write_excel_csv("csv/univariate/univariate-summary.csv")

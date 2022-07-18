@@ -15,8 +15,13 @@ dat <- readRDS("dat/quant_vars.rds") %>%
     na.rm = TRUE
   )) %>%
   dplyr::mutate(
-    num_div_incl_nonbin = dplyr::if_else(personal_gender %in% c(3), num_div + 1L, num_div),
-    num_div_incl_nonmale = dplyr::if_else(personal_gender %in% c(2, 3), num_div + 1L, num_div)
+    num_div_incl_nonbin = dplyr::if_else(personal_gender %in% c("Non-binary or genderqueer"),
+                                         num_div + 1L,
+                                         num_div),
+    num_div_incl_nonmale = dplyr::if_else(personal_gender %in% c("Non-binary or genderqueer",
+                                                                 "Male"),
+                                          num_div + 1L,
+                                          num_div)
   ) %>%
   dplyr::ungroup() %>%
   dplyr::mutate_at(.vars = vars(starts_with("num_div")),
@@ -122,6 +127,64 @@ dat <- readRDS("dat/quant_vars.rds") %>%
       1L,
       personal_lgbtq
     )
+  ) %>%
+  dplyr::mutate(
+    self_any = max(c(
+      self_insult,
+      self_threat,
+      self_molest,
+      self_discri
+    ),
+    na.rm = TRUE),
+    self_any_col = max(c(
+      self_insult_col,
+      self_threat_col,
+      self_molest_col,
+      self_discri_col
+    ),
+    na.rm = TRUE),
+    self_any_sup = max(c(
+      self_insult_sup,
+      self_threat_sup,
+      self_molest_sup,
+      self_discri_sup
+    ),
+    na.rm = TRUE),
+    self_any_oth = max(c(
+      self_insult_oth,
+      self_threat_oth,
+      self_molest_oth,
+      self_discri_oth
+    ),
+    na.rm = TRUE),
+    others_any = max(c(
+      others_insult,
+      others_threat,
+      others_molest,
+      others_discri
+    ),
+    na.rm = TRUE),
+    others_any_col = max(c(
+      others_insult_col,
+      others_threat_col,
+      others_molest_col,
+      others_discri_col
+    ),
+    na.rm = TRUE),
+    others_any_sup = max(c(
+      others_insult_sup,
+      others_threat_sup,
+      others_molest_sup,
+      others_discri_sup
+    ),
+    na.rm = TRUE),
+    others_any_oth = max(c(
+      others_insult_oth,
+      others_threat_oth,
+      others_molest_oth,
+      others_discri_oth
+    ),
+    na.rm = TRUE)
   ) %>%
   dplyr::ungroup()
 
