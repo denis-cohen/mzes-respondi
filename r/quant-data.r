@@ -124,8 +124,12 @@ dat <- readxl::read_xlsx(
   ) %>%
   dplyr::mutate_all(.funs = ~ dplyr::if_else(. == -77, NA_real_, .)) %>%
   dplyr::mutate_at(
-    .vars = vars(v_16, v_17, v_21, v_22, v_23),
-    .funs = ~ dplyr::if_else(!(. %in% 1:11), NA_real_, .)
+    .vars = vars(v_16, v_17),
+    .funs = ~ dplyr::if_else(!(. %in% 1:11), NA_real_, . - 1)
+  ) %>%
+  dplyr::mutate_at(
+    .vars = vars(v_21, v_22, v_23),
+    .funs = ~ dplyr::if_else(!(. %in% 1:12), NA_real_, . - 1)
   ) %>%
   dplyr::mutate_at(.vars = vars(v_114),
                    .funs = ~ dplyr::if_else(!(. %in% 1:6), NA_real_, .)) %>%
@@ -319,6 +323,15 @@ dat <- dat %>%
     .funs = ~ dplyr::if_else(self_support == 1,
                              ., 
                              NA_integer_)
+  ) %>%
+  dplyr::mutate_at(
+    .vars = vars(dplyr::starts_with("personal_") &
+                   !dplyr::contains("occup") &
+                   !dplyr::contains("gender") &
+                   !dplyr::contains("refuse")),
+    .funs = ~ dplyr::if_else(personal_refuse == 1,
+                             NA_integer_,
+                             .)
   )
 
 ## ---- Save ----

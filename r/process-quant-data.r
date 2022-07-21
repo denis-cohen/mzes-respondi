@@ -15,23 +15,26 @@ dat <- readRDS("dat/quant_vars.rds") %>%
     na.rm = TRUE
   )) %>%
   dplyr::mutate(
-    num_div_incl_nonbin = dplyr::if_else(personal_gender %in% c("Non-binary or genderqueer"),
+    num_div_incl_nonbin = dplyr::if_else(personal_gender %in% c(3),
                                          num_div + 1L,
                                          num_div),
-    num_div_incl_nonmale = dplyr::if_else(personal_gender %in% c("Non-binary or genderqueer",
-                                                                 "Male"),
+    num_div_incl_nonmale = dplyr::if_else(personal_gender %in% c(1, 3),
                                           num_div + 1L,
                                           num_div)
   ) %>%
   dplyr::ungroup() %>%
   dplyr::mutate_at(.vars = vars(starts_with("num_div")),
+                   .funs = ~ifelse(personal_refuse == 1, NA_integer_, .)) %>%
+  dplyr::mutate_at(.vars = vars(starts_with("num_div")),
                    .funs = ~ifelse(. > 3, 3, .)) %>%
   dplyr::mutate_at(.vars = vars(starts_with("num_div")),
-                   .funs = ~ factor(., levels = c(0:2, "3 or more"))) %>%
+                   .funs = ~ factor(., 
+                                    levels = c(0:3),
+                                    labels = c(0:2, "3 or more"))) %>%
   dplyr::mutate_at(.vars = vars(starts_with("work_")),
                    .funs = ~ factor(
                      .,
-                     levels = 1:11,
+                     levels = 0:10,
                      labels = c(
                        "Not at all satisfied",
                        1:4,
@@ -46,7 +49,7 @@ dat <- readRDS("dat/quant_vars.rds") %>%
                  covid_admin),
     .funs = ~ factor(
       .,
-      levels = 1:12,
+      levels = 0:11,
       labels = c(
         "Much harder",
         1:4,
