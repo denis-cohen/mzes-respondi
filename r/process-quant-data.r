@@ -72,6 +72,17 @@ dat <- readRDS("dat/quant_vars.rds") %>%
                      )
                    )) %>%
   dplyr::mutate_at(
+    .vars = vars(self_conseq_career,
+                 self_support,
+                 self_conseq_offender),
+    .funs = ~ factor(
+      .,
+      levels = 1:2,
+      labels = c("0",
+                 "1")
+    )
+  ) %>%
+  dplyr::mutate_at(
     .vars = vars(others_conseq_career,
                  others_conseq_offender),
     .funs = ~ factor(
@@ -193,7 +204,10 @@ dat <- readRDS("dat/quant_vars.rds") %>%
 
 binary_vars <- dat %>%
   dplyr::select(
-    starts_with("self_") & !ends_with("_freq"),
+    starts_with("self_") & 
+      !ends_with("_freq") & 
+      !contains("_conseq") &
+      !ends_with("_support"),
     starts_with("covid_neg_"),
     starts_with("others_") & !ends_with("_freq") & !contains("conseq"),
     starts_with("personal_") & !ends_with("occup") & !ends_with("gender")
